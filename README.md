@@ -9,11 +9,11 @@ To run this simply type:
 > ./run_cluster.sh
 
 Or if you want to manually run it 1 by 1:
-> docker network create hadoop_network
-> docker build -t hadoop-base:3.3.1 -f Dockerfile-hadoop .
-> docker-compose -f docker-compose-hadoop.yml up -d
-> cd airflow && ./run_airflow.sh && cd ..
-> docker-compose -f docker-compose-airflow.yml up -d
+> docker network create hadoop_network  
+> docker build -t hadoop-base:3.3.1 -f Dockerfile-hadoop .  
+> docker-compose -f docker-compose-hadoop.yml up -d  
+> cd airflow && ./run_airflow.sh && cd ..  
+> docker-compose -f docker-compose-airflow.yml up -d  
 
 To stop it just run:
-> ./stop_cluster.sh
+> ./stop_cluster.sh  
